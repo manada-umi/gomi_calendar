@@ -13,4 +13,4 @@ Manada Umi
 当アプリをご利用の上で発生したあらゆる損害に関して、提供元は一切の責任を負いません。
 
 ## 素材提供
-『ICOON MONO』TopeconHeroes様
+- 『ICOON MONO』TopeconHeroes様
