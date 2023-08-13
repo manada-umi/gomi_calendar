@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+    <script src="js/script.js"></script>
+    <title>茅ヶ崎市ゴミカレンダー</title>
+    <script>
+        window.onload = function () {
+            initialize();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="Menu">
+        <span class="menu-titile" id="menu-title"></span>
+        <img class="menu-button" src="img/config.png" align="right" onclick="movePanel('Config')">
+    </div>
+    <div class="Panel">
+        <div class="MainPanel" id="MainPanel">
+            <div id="MainPanel-Today"></div>
+            <br>
+            <div id="MainPanel-Tomorrow"></div>
+            <br>
+            <div id="MainPanel-Calendar"></div>
+            <br>
+            <div id="MainPanel-Icon"></div>
+        </div>
+        <div class="ConfigPanel" id="ConfigPanel">
+            <div class="button">
+                <button onclick="saveConfig()">決定</button>
+                <button onclick="cancel()">キャンセル</button>
+            </div>
+            <div class="config-content" id="config-content">
+                <br>
+                <br>
+                <b>地区番号</b>＝<select id="selectChikuBangou"></select><br>
+                <br>
+                <b>1番地区</b>：香川・松風台・甘沼・行谷・芹沢・堤・下寺尾・みずき地区<br>
+                <b>2番地区</b>：赤羽根・高田・室田・小和田・菱沼・松林地区<br>
+                <b>3番地区</b>：小桜町・代官町・本宿町・赤松町・浜竹・出口町・ひばりヶ丘・旭が丘・美住町・松浪地区<br>
+                <b>4番地区</b>：東海岸南・常盤町・富士見町・平和町・松が丘・菱沼海岸・白浜町・浜須賀・緑が浜・汐見台地区<br>
+                <b>5番地区</b>：西久保・円蔵・鶴が台・矢畑・浜之郷・下町屋地区<br>
+                <b>6番地区</b>：茅ヶ崎・本村・元町・幸町・新栄町・十間坂・共恵地区<br>
+                <b>7番地区</b>：南湖・中海岸・東海岸北・若松町地区<br>
+                <b>8番地区</b>：萩園・平太夫新田・今宿・中島・松尾・柳島・柳島海岸・浜見平地区<br>
+                <!-- <button onclick="clearData()">初期化</button> -->
+                <br>
+                <div class="config-credit">
+                    【免責事項】<br>
+                    当アプリをご利用の上で発生したあらゆる損害に関して、提供元は一切の責任を負いません。<br>
+                    ver.0.9.0 / author Umi<br>
+                </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
