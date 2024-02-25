@@ -1,5 +1,5 @@
 // 定数
-const STORAGE_NAME = 'gomi_calendar_sd';
+const STORAGE_NAME = 'manada_umi-gomi_calendar_sd';
 const PANEL_LIST = ['Main', 'Config'];
 const GOMI_LIST = ['収集無し', '燃やせるごみ', '燃やせないごみ', 'プラスチック製容器包装類', 'びん・かん、ペットボトル、廃食用油、金属類', '古紙類', '衣類・布類'];
 const GOMI＿CALENDAR1 = {
@@ -82,9 +82,9 @@ function getGomi(dataObj) {
     if (gomi == 2) {
         var d2 = new Date(dataObj.getFullYear(), dataObj.getMonth(), dataObj.getDate() - Math.floor(dataObj.getDate() / 7) * 7);
         if (dataObj.getMonth() == 0 && d2.getDate() < 4) {
-            gomi = GOMI＿CALENDAR2[Math.floor((data.chikuBangou - 1) / 2)][Math.floor(dataObj.getDate() / 7) - 1];
+            gomi = GOMI＿CALENDAR2[Math.floor((data.chikuBangou - 1) / 2)][Math.floor((dataObj.getDate() - 1) / 7) - 1];
         } else {
-            gomi = GOMI＿CALENDAR2[Math.floor((data.chikuBangou - 1) / 2)][Math.floor(dataObj.getDate() / 7)];
+            gomi = GOMI＿CALENDAR2[Math.floor((data.chikuBangou - 1) / 2)][Math.floor((dataObj.getDate() - 1) / 7)];
         }
     }
     // びん・かん、ペットボトル、廃食用油、金属類　／　古紙類
